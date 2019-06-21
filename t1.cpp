@@ -1,14 +1,16 @@
 #include<stdio.h>
 #include<iostream>
-#include<stdlib.h>
-#include<string>
-#include<string.h>
-#include<vector>
-#include<queue>
 using namespace std;
 
 int main()
 {
-    char x=3+'A';
-    cout<<x;
+    int N=1000;//需要到多少
+    for(int i=1;i<=N;i++)
+    {
+        if(i%3==1 && i!=1)
+            cout<<i<<" "<<i<<" ";
+        else
+            cout<<i<<" ";
+    }
+    return 0;
 }
