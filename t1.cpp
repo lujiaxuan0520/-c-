@@ -1,16 +1,17 @@
 #include<stdio.h>
 #include<iostream>
+#include<set>
 using namespace std;
 
 int main()
 {
-    int N=1000;//需要到多少
-    for(int i=1;i<=N;i++)
-    {
-        if(i%3==1 && i!=1)
-            cout<<i<<" "<<i<<" ";
-        else
-            cout<<i<<" ";
-    }
+    set<int> S;
+    S.insert(1);
+    S.insert(2);
+    set<int>::iterator iter=S.find(2);
+    int count=0;
+    for(set<int>::iterator it=S.begin();it!=iter;it++)
+        count++;
+    cout<<count;
     return 0;
 }
